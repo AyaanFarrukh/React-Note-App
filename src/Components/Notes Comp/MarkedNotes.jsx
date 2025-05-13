@@ -112,7 +112,7 @@ export function MarkedNotes({Note,all,marked,setViewAll,setViewMarked}) {
                     setShow : true
                 }))
                 navigate("/main-notes");
-            }}><img className="edit-icon" src="/edit-new-icon-22.png"></img></button>
+            }}><img className="edit-icon" src= {process.env.PUBLIC_URL + '/edit-new-icon-22.png'}></img></button>
             <button title="Delete" onClick={(e) => {
                 e.stopPropagation();
                             setNotes((currentNotes) => {
@@ -125,11 +125,11 @@ export function MarkedNotes({Note,all,marked,setViewAll,setViewMarked}) {
                                   return note.id !== Note.id 
                                 });
                               });
-            }}><img className="delete-icon" src="/delete-icon.png"/></button>
+            }}><img className="delete-icon" src={process.env.PUBLIC_URL + '/delete-icon.png'}/></button>
             <button title="Download File" style={{color: "black"}} onClick={(e) => {
                 e.stopPropagation();
                 downloadAsTxt(Note.title,Note.description);
-            }}><img src="/downloads-icon.png" className="download-icon"></img></button></div>
+            }}><img src={process.env.PUBLIC_URL + '/downloads-icon.png'} className="download-icon"></img></button></div>
      </div>}
         </>
     )
