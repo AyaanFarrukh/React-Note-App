@@ -29,7 +29,7 @@ export function MainContent() {
         <button className="back-btn" onClick={() => {
           navigate("/");
           SetEdit(false);
-        }}><img src="/back-icon.png"></img></button>
+        }}><img src={process.env.PUBLIC_URL + '/back-icon.png'}></img></button>
          
           {isEdit || currentNote.setShow ? (<button className="editnote-btn" onClick={() => {
             setNotes((currentNotes) => {
@@ -55,9 +55,9 @@ export function MainContent() {
               })
             })
             SetEdit(false);
-          }}><img src = "/save-icon.png"></img></button>) : (<button className="editnote-btn" onClick={() => {
+          }}><img src ={process.env.PUBLIC_URL + '/save-icon.png'}></img></button>) : (<button className="editnote-btn" onClick={() => {
             SetEdit((current) => !current);
-          }}><img src = "/edit-new-icon-22.png"></img></button>)}
+          }}><img src ={process.env.PUBLIC_URL + '/edit-new-icon-22.png'}></img></button>)}
 
           <button className="delnote-btn" onClick={() => {
             setNotes((currentNotes) => {
@@ -66,7 +66,7 @@ export function MainContent() {
               });
             });
             navigate("/");
-          }}><img src = "/delete-icon.png"></img></button>
+          }}><img src ={process.env.PUBLIC_URL + '/delete-icon.png'}></img></button>
         </div>
         <h2 className="title-head">📝 Title:</h2>
         {isEdit || currentNote.setShow ? (<input className="title-input" value={title} onChange={(e) => {

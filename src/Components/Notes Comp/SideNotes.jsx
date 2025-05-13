@@ -95,8 +95,8 @@ const dayName = days[currentDate.getDay()];
                 }
                });
                  
-            }}>{markedNotes.some((n) => n.id === Note.id) ? <img src="/gold-star.png"></img> 
-            : <img src="/white-star.png"></img>}</button>
+            }}>{markedNotes.some((n) => n.id === Note.id) ? <img src={process.env.PUBLIC_URL + '/gold-start.png'}></img> 
+            : <img src={process.env.PUBLIC_URL + '/white-start.png'}></img>}</button>
         </div>
         <div className="title-div"><h2 className="title">📝 {Note.title}</h2></div>
         {/* <p className="desc">🗒️ Description</p> */}
@@ -111,7 +111,7 @@ const dayName = days[currentDate.getDay()];
                     setShow : true
                 }))
                 navigate("/main-notes");
-            }}><img className="edit-icon" src="/edit-new-icon-22.png"></img></button>
+            }}><img className="edit-icon" src={process.env.PUBLIC_URL + '/edit-new-icon-22.png'}></img></button>
             <button title="Delete" onClick={(e) => {
                 e.stopPropagation();
                             setNotes((currentNotes) => {
@@ -124,11 +124,11 @@ const dayName = days[currentDate.getDay()];
                                   return note.id !== Note.id 
                                 });
                               });
-            }}><img className="delete-icon" src="/delete-icon.png"/></button>
+            }}><img className="delete-icon" src={process.env.PUBLIC_URL + '/delete-icon.png'}/></button>
             <button title="Download File" style={{color: "black"}} onClick={(e) => {
                 e.stopPropagation();
                 downloadAsTxt(Note.title,Note.description);
-            }}><img src="/downloads-icon.png" className="download-icon"></img></button></div>
+            }}><img src={process.env.PUBLIC_URL + '/downloads-icon.png'} className="download-icon"></img></button></div>
      </div>}
      </>
  )

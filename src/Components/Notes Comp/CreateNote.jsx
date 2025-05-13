@@ -52,10 +52,10 @@ export function CreateNote() {
             SetTitle(""); 
             navigate("/");
             
-            }}><img src = "/add-icon.png" ></img></button> 
+            }}><img src ={process.env.PUBLIC_URL + '/add-icon.png'} ></img></button> 
                 <button title="Cancel" onClick={() => {
                     navigate("/")
-                }}><img src="/cross-icon.png"></img></button>
+                }}><img src={process.env.PUBLIC_URL + '/cross-icon.png'}></img></button>
             </div>
             <div className="main-area">
             {isEmpty && (<div className="isempty-div"><p>You Cannot Create An Empty Note</p> 
