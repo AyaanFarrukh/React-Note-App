@@ -95,8 +95,8 @@ const dayName = days[currentDate.getDay()];
                 }
                });
                  
-            }}>{markedNotes.some((n) => n.id === Note.id) ? <img src={process.env.PUBLIC_URL + '/gold-start.png'}></img> 
-            : <img src={process.env.PUBLIC_URL + '/white-start.png'}></img>}</button>
+            }}>{markedNotes.some((n) => n.id === Note.id) ? <img src={process.env.PUBLIC_URL + '/gold-star.png'}></img> 
+            : <img src={process.env.PUBLIC_URL + '/white-star.png'}></img>}</button>
         </div>
         <div className="title-div"><h2 className="title">📝 {Note.title}</h2></div>
         {/* <p className="desc">🗒️ Description</p> */}
