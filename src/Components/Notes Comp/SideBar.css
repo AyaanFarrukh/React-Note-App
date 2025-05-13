@@ -1,0 +1,312 @@
+aside {
+    background-color: rgb(255, 249, 249);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+    height: 100vh;
+    border-radius: 20px;
+    margin-top: 0px;
+    width: 100%;
+    display: grid;
+    padding: 40px 20px; 
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: start;
+    border: 1px solid grey;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    gap: 10px;
+    box-sizing: border-box;
+    row-gap: 20px;
+}  
+.main-box {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+  background-color: rgb(92, 14, 238);
+}
+.buttons-box {
+  width: fit-content;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: flex-end;
+  margin-top: -100px;
+}
+.buttons-box button {
+ width: 100px;
+ margin: 10px;
+ font-family: "Poppins";
+ font-size: 15px;
+ border: none;
+ height: 40px;
+ background-color: rgb(255, 255, 255);
+ border-radius: 10px;
+ box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+ cursor: pointer;
+}
+.mark-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mark-button img{
+  width: 30px;
+  height: 30px;
+}
+.head {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 2px 4px black;
+  font-size: 75px;
+  font-family: "Bebas Neue";
+  letter-spacing: 3px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  padding: 5px;
+  grid-column: 1/-1;
+  /* text-shadow: 0px 8px 10px rgba(150, 141, 141, 0.5); */
+}
+.noteDiv {
+   margin-top: 0px; 
+   height: 325px;
+   border-radius: 20px;
+   margin: 5px;
+   display: flex;
+   align-items: left;
+   justify-content: space-between;
+   flex-direction: column;
+   padding: 12px;
+   font-family: "Cal Sans";
+   overflow: hidden;
+   cursor: pointer;
+   flex-shrink: 0;
+   position: relative;
+   box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+   transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out,scale 0.2s ease-in-out;
+}
+.noteDiv:hover {
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.4);
+  scale: 1.05;
+  opacity: 0.89;
+}
+.desc {
+  color: rgb(0, 0, 0);
+  font-family: "Bebas Neue";
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-left: 8px;
+  text-align: center;
+}
+.desc-line {
+  margin-top: -15px;
+  width: 50%;
+}
+.noteDiv h2 {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  color: black;
+  font-family: "Inter";
+  font-weight: 550;
+  font-size: 22px;
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 0px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  max-height: none;
+  text-overflow: ellipsis;   /* Limit height */
+  overflow: hidden;        /* Prevent overflow */
+}
+aside hr {
+  border: 1px solid rgb(194, 188, 188);
+}
+.title-line{
+  width: 93%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 1px solid rgb(194, 188, 188);
+}
+.description {
+    color: rgb(3, 3, 3);
+    font-weight: 0px;
+    font-family: "Inter";
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 0px;
+    text-align: left;
+    white-space: normal;
+    line-height: 20px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+.title-div {
+  border-bottom: 1px solid rgb(48, 44, 44);
+}
+.control-div {
+  border-top: 1px solid rgb(48, 44, 44);
+  height: 50px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-shrink: 0;
+}
+.desc-div {
+  position: relative;
+  display: flex;
+  width: 99%;
+  height: 180px;
+  margin-top: 0px;
+  overflow: hidden;
+  padding: 2px;
+  border-radius: 5px;
+}
+.delete-icon,.edit-icon,.download-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.date-box,.date-top-box {
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  font-family: "Inter";
+}
+.date-top-box {
+  margin-left: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-div button {
+  font-family:  "Poppins";
+    cursor: pointer;
+    padding: 20px;
+    margin-right: 10px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+    border: none;
+    transition: opacity 0.2s ease-in-out,box-shadow 0.2s ease-in-out;
+}
+.control-div button:hover {
+  opacity: 0.8;
+}
+/* Scrollbar */
+aside::-webkit-scrollbar {
+    width: 10px; /* Adjust width */
+  }
+  
+  /* Scrollbar track (background) */
+  aside::-webkit-scrollbar-track {
+    background: #3a3a3a; /* Change to your preferred color */
+    border-radius: 5px;
+  }
+  
+  /* Scrollbar thumb (the draggable part) */
+  aside::-webkit-scrollbar-thumb {
+    background: #888; /* Change this color */
+    border-radius: 50px;
+  }
+  
+  /* Scrollbar thumb on hover */
+  aside::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+  }
+  @media screen and (max-width: 2200px) {
+    aside {
+      grid-template-columns: repeat(4,1fr);
+      margin-top: 0px;
+      grid-auto-rows: 375px;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    aside {
+      grid-template-columns: repeat(3,1fr);
+      margin-top: 0px;
+    }
+  }
+
+@media screen and (max-width: 1024px) {
+  aside {
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 0px;
+    grid-auto-rows: 375px;
+  }
+}
+
+@media screen and (max-width: 855px) {
+   aside {
+    margin-top: 0px;
+    grid-template-columns: repeat(2,1fr);
+   }
+}
+
+@media screen and (max-width: 834px) {
+  aside {
+     margin-top: 0px;
+     row-gap: 20px;
+  }
+  .noteDiv {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 613px) {
+ .buttons-box {
+  margin-top: -50px;
+  align-self: center;
+ }
+ .head {
+  text-align: center;
+  margin-left: 0px;
+ }
+}
+@media screen and (max-width: 470px) {
+  .head {
+    font-size: 55px;
+    text-align: center;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .head {
+    font-size: 50px;
+  }
+  .buttons-box button{
+   width: 80px;
+   }
+}
+@media screen and (max-width: 280px) {
+  .head {
+    font-size: 40px;
+  }
+  .buttons-box button{
+    width: 60px;
+    height: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+  aside {
+   margin-top: 0px;
+   grid-template-columns: repeat(1,1fr);
+  }
+}
+

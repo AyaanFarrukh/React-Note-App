@@ -1,0 +1,8 @@
+body {
+    height: auto;
+    background-color: rgb(211, 210, 210);
+}
+.container {
+    display: flex;
+    height: 100vh;
+}

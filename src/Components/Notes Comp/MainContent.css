@@ -1,0 +1,353 @@
+main {
+    background-color:rgb(255, 255, 255);
+    height: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 98.5%;
+    border-radius: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+}
+hr {
+  width: 90%;
+  border: 1px solid grey;
+}
+h2 {
+  color: rgb(0, 0, 0);
+  font-family: "Arial";
+  margin-left: 65px;
+  margin-bottom: 5px;
+  align-self: flex-start;
+  line-height: 40px;
+}
+.Description {
+  font-size: 30px;
+}
+.note-title {
+ color: rgb(0, 0, 0);
+ font-family: "Bebas Neue";
+ letter-spacing: 1px;
+ font-size: 75px;
+ margin-bottom: 0px;
+ text-align: center;
+ margin-top: 0px;
+}
+.title-input {
+  margin: 10px;
+  border: none;
+  background-color:rgb(228, 228, 196);
+  font-family: "Bebas Neue";
+  letter-spacing: 1.5px;
+  height: 60px;
+  padding: 10px;
+  width: 90%;
+  outline: none;
+  font-size: 50px;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid grey;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.title-head {
+  margin-top: -50px;
+  font-size: 40px;
+}
+.desc-input {
+  align-self: flex-start;
+  margin-left: 60px;
+  border: none;
+  margin-top: 15px;
+  background-color: rgb(228, 228, 196);
+  height: 400px;
+  text-align: left;
+  vertical-align: top;
+  border-radius: 20px;
+  outline: none;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  padding: 10px;
+  width: 90%;
+  outline: visible;
+  font-size: 20px;
+  overflow-y: scroll;
+  color: black;
+  resize: none;
+}
+.desc-input::-webkit-scrollbar {
+  width: 10px; /* Adjust width */
+  background-color:  #3a3a3a;
+  border-radius: 5px;
+}
+
+/* Scrollbar track (background) */
+.desc-input::-webkit-scrollbar-track {
+  background: #3a3a3a; /* Change to your preferred color */
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+/* Scrollbar thumb (the draggable part) */
+.desc-input::-webkit-scrollbar-thumb {
+  background: #888; /* Change this color */
+  border-radius: 50px;
+  cursor: grab;
+}
+
+/* Scrollbar thumb on hover */
+.desc-input::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+} 
+
+
+.note-desc {
+    color: rgb(0, 0, 0);
+    font-family: "Poppins";
+    font-size: 18px;
+    margin-top: 0px;
+    margin-left: 61px;
+    white-space: normal;  
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    width: 94%;
+ }
+
+ .controls-box {
+  display: flex;
+  height: 8%;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: right;
+  gap: 20px;
+  padding: 20px;
+ }
+
+ .back-btn,.editnote-btn,.delnote-btn {
+  font-family:  "Poppins";
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 20px;
+  background-color: rgb(255, 208, 1);
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0,0.2);
+  border: none;
+  transition: background-color 0.5s ease-in-out;
+ }
+ .delnote-btn {
+  background-color: rgb(1, 1, 2);
+ }
+ .back-btn:hover,.editnote-btn:hover,.delnote-btn:hover {
+  opacity: 0.9;
+ }
+
+ .controls-box button img {
+  width: 30px;
+ }
+ .del-button {
+  background-color: red;
+ }
+
+main::-webkit-scrollbar {
+    width: 10px; /* Adjust width */
+  }
+  
+  /* Scrollbar track (background) */
+  main::-webkit-scrollbar-track {
+    background: #3a3a3a; /* Change to your preferred color */
+    border-radius: 5px;
+  }
+  
+  /* Scrollbar thumb (the draggable part) */
+  main::-webkit-scrollbar-thumb {
+    background: #888; /* Change this color */
+    border-radius: 50px;
+  }
+  
+  /* Scrollbar thumb on hover */
+  main::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+  }
+
+  @media screen and (max-width: 2250px) {
+    main {
+      width: 99%;
+    }
+    .desc-input {
+      width: 90%;
+      margin-left: 100px;
+    }
+  }
+  @media screen and (max-width: 1900px) {
+    .desc-input {
+      width: 90%;
+      margin-left: 85px;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    .desc-input {
+      width: 90%;
+      margin-left: 60px;
+    }
+  }
+  @media screen and (max-width: 1150px) {
+    main {
+      width: 98%;
+    }
+    .Description {
+      margin-left: 50px;
+    }
+    .desc-input {
+      margin-left: 40px;
+    }
+    .note-desc {
+      margin-left: 38px;
+    }
+    .title-head {
+      margin-left: 50px;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+  .note-title {
+    font-size: 60px;
+  }
+  .title-head {
+    margin-top: -50px;
+    margin-left: 40px;
+  }
+  .Description {
+    margin-left: 40px;
+  }
+  .note-desc {
+    margin-left: 36px;
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+    .note-title {
+      font-size: 50px;
+      margin-top: 10px;
+    }
+    .desc-input {
+      margin-left: 30px;
+    }
+    .title-input {
+      font-size: 40px;
+    }
+    .title-head {
+      margin-top: -30px;
+      margin-left: 40px;
+    }
+    .Description {
+      margin-left: 40px;
+    }
+    .note-desc {
+      margin-left: 36px;
+    }
+    }
+
+    
+  @media screen and (max-width: 625px) {
+    .note-title {
+      font-size: 40px;
+      margin-top: 10px;
+    }
+    .desc-input {
+      margin-left: 20px;
+    }
+    .title-head {
+      margin-top: -30px;
+      margin-left: 20px;
+      font-size: 30px;
+    }
+    .Description {
+      margin-left: 20px;
+      font-size: 25px;
+    }
+    .note-desc {
+      margin-left: 10px;
+    }
+    .controls-box button {
+      width: 45px;
+      height: 45px;
+    }
+    .controls-box button img {
+      width: 25px;
+      height: 25px;
+    }
+    }
+
+    @media screen and (max-width: 430px) {
+      .note-title {
+        font-size: 40px;
+        margin-top: 20px;
+      }
+      .title-head {
+        margin-top: -5px;
+        margin-left: 15px;
+        font-size: 30px;
+      }
+      .desc-input {
+        margin-left: 10px;
+      }
+      .Description {
+        margin-left: 15px;
+        font-size: 25px;
+      }
+      .note-desc {
+        margin-left: 10px;
+      }
+      .controls-box button {
+        width: 40px;
+        height: 40px;
+      }
+      .controls-box button img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @media screen and (max-width: 360px) {
+      main {
+        width: 96%;
+      }
+      .note-title {
+        font-size: 30px;
+        margin-top: 20px;
+      }
+      .title-head {
+        margin-top: -5px;
+        margin-left: 15px;
+        font-size: 30px;
+      }
+      .desc-input {
+        margin-left: 5px;
+      }
+      .Description {
+        margin-left: 15px;
+        font-size: 25px;
+      }
+      .note-desc {
+        margin-left: 10px;
+      }
+      .controls-box button {
+        width: 40px;
+        height: 40px;
+      }
+      .controls-box button img {
+        width: 20px;
+        height: 20px;
+      }
+      }
