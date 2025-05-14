@@ -82,28 +82,28 @@ h2 {
   resize: none;
 }
 .desc-input::-webkit-scrollbar {
-  width: 10px; /* Adjust width */
+  width: 10px;
   background-color:  #3a3a3a;
   border-radius: 5px;
 }
 
-/* Scrollbar track (background) */
+
 .desc-input::-webkit-scrollbar-track {
-  background: #3a3a3a; /* Change to your preferred color */
+  background: #3a3a3a; 
   border-radius: 5px;
   border: 1px solid grey;
 }
 
-/* Scrollbar thumb (the draggable part) */
+
 .desc-input::-webkit-scrollbar-thumb {
-  background: #888; /* Change this color */
+  background: #888; 
   border-radius: 50px;
   cursor: grab;
 }
 
-/* Scrollbar thumb on hover */
+
 .desc-input::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Darker color on hover */
+  background: #555; 
 } 
 
 

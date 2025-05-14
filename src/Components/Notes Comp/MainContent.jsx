@@ -3,12 +3,13 @@ import "./MainContent.css"
 import {Route,Routes} from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useContext } from "react"
-import { NotesContext, selectNoteContext } from "../../utils/NotesHooks/NotesContext"
+import { MarkedNotesContext, NotesContext, selectNoteContext } from "../../utils/NotesHooks/NotesContext"
 import { useNavigate } from "react-router-dom"
 
 export function MainContent() {
   const {currentNote,setSelectedNote} = useContext(selectNoteContext);
   const {userNotes,setNotes} = useContext(NotesContext);
+  const {markedNotes,setMarkedNotes} = useContext(MarkedNotesContext);
   const [isEdit,SetEdit] = useState(false);
   const [title,setTitle] = useState(currentNote.title)
   const [description,setDescription] = useState(currentNote.description)
@@ -61,6 +62,11 @@ export function MainContent() {
 
           <button className="delnote-btn" onClick={() => {
             setNotes((currentNotes) => {
+              return currentNotes.filter((note) => {
+                return note.id !== currentNote.id
+              });
+            });
+            setMarkedNotes((currentNotes) => {
               return currentNotes.filter((note) => {
                 return note.id !== currentNote.id
               });

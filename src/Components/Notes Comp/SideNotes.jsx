@@ -9,7 +9,6 @@ export function SideNotes({Note,all,marked,setViewAll,setViewMarked}) {
  const {currentNote,setSelectedNote} = useContext(selectNoteContext);
  const {userNotes,setNotes} = useContext(NotesContext);
  const navigate = useNavigate();
- const title = document.querySelector('.title');
  let bgColor;
 
  function randomBg() {

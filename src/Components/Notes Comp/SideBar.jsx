@@ -2,7 +2,7 @@ import "./SideBar.css"
 import { NotesContext,MarkedNotesContext } from "../../utils/NotesHooks/NotesContext"
 import { useContext, useEffect,useRef, useState} from "react"
 import { SideNotes } from "./SideNotes";
-import { Route,Routes } from "react-router-dom";
+import { Route,Routes, useNavigate } from "react-router-dom";
 import { CreateNote } from "./CreateNote";
 import { MarkedNotes } from "./MarkedNotes";
 
@@ -12,8 +12,8 @@ export function SideBar() {
     const titleRef = useRef(null);
     const [viewAll,setViewAll] = useState(true);
     const [viewMarked,setViewMarked] = useState(false);
+    const navigate = useNavigate();
     
-    useEffect(() => console.log(markedNotes),[markedNotes])
     return (
         <div className="main-box" style={{width: "100%"}}>
             <h1 className="head" ref={titleRef}>Your Notes</h1>
@@ -21,11 +21,11 @@ export function SideBar() {
                 <button onClick={() => {
                     setViewAll(true);
                     setViewMarked(false);
-                }} style={{backgroundColor: viewAll ? "lime" : "white" }}>All</button>
+                }} style={{backgroundColor: viewAll ? "lightblue" : "white" }}>All</button>
                 <button onClick={() => {
                     setViewAll(false);
                     setViewMarked(true);
-                }} style={{backgroundColor: viewMarked ? "lime" : "white"}}>Marked</button>
+                }} style={{backgroundColor: viewMarked ? "lightblue" : "white"}}>Marked</button>
             </div> 
         <aside>
           {viewAll && userNotes.map((currentNote,index) => {
@@ -37,6 +37,8 @@ export function SideBar() {
                 return <MarkedNotes Note={currentNote} all = {viewAll} marked={viewMarked} 
              setViewAll = {setViewAll} setViewMarked={setViewMarked}/>
             })}
+            {viewAll && 
+            <div className="noteDiv createNoteDiv"><button onClick={() => navigate('/create-note')}>+</button></div>}
         </aside>
         </div>
     )

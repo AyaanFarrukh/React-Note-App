@@ -25,10 +25,6 @@ export function CreateNote() {
      localStorage.setItem("description",JSON.stringify(Description));
     },[Description])
 
-    // useEffect(() => {
-    //  console.log(userNotes);
-    // },[userNotes])
-   
     return (
         <div className="CreateContainer">
             <div className="header">

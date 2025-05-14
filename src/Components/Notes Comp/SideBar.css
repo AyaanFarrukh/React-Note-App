@@ -1,7 +1,7 @@
 aside {
     background-color: rgb(255, 249, 249);
     box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
-    height: 100vh;
+    min-height: 100vh;
     border-radius: 20px;
     margin-top: 0px;
     width: 100%;
@@ -71,7 +71,6 @@ aside {
   margin-bottom: 0px;
   padding: 5px;
   grid-column: 1/-1;
-  /* text-shadow: 0px 8px 10px rgba(150, 141, 141, 0.5); */
 }
 .noteDiv {
    margin-top: 0px; 
@@ -95,6 +94,43 @@ aside {
   box-shadow: 0px 6px 12px rgba(0,0,0,0.4);
   scale: 1.05;
   opacity: 0.89;
+}
+.createNoteDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: dashed;
+  box-shadow: none;
+  border-width: 1px;
+  cursor: auto;
+}
+.createNoteDiv:hover {
+  box-shadow: none;
+  scale: none;
+  opacity: 1;
+}
+.createNoteDiv button {
+  border-radius: 20px;
+  border: none;
+  height: 80px;
+  width: 80px;
+  font-size: 40px;
+  cursor: pointer;
+  background-color: none;
+  border-style: dashed;
+  border-color: black;
+  border-width: 1px;
+  color: black;
+  display: flex;
+  font-family: "Inter";
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out,box-shadow 0.2s ease-in-out;
+}
+.createNoteDiv button:hover {
+  opacity: 0.7;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+  transition: all 0.2s ease-in-out;
 }
 .desc {
   color: rgb(0, 0, 0);
@@ -123,8 +159,8 @@ aside {
   text-transform: uppercase;
   white-space: nowrap;
   max-height: none;
-  text-overflow: ellipsis;   /* Limit height */
-  overflow: hidden;        /* Prevent overflow */
+  text-overflow: ellipsis;  
+  overflow: hidden;        
 }
 aside hr {
   border: 1px solid rgb(194, 188, 188);
@@ -177,8 +213,12 @@ aside hr {
 
 .date-box,.date-top-box {
   margin-top: 10px;
+  font-size: 15px;
   color: rgb(0, 0, 0);
   font-family: "Inter";
+}
+.date-box {
+  margin-bottom: 3px;
 }
 .date-top-box {
   margin-left: 0px;
@@ -208,26 +248,26 @@ aside hr {
 .control-div button:hover {
   opacity: 0.8;
 }
-/* Scrollbar */
+
 aside::-webkit-scrollbar {
-    width: 10px; /* Adjust width */
+    width: 10px; 
   }
   
-  /* Scrollbar track (background) */
+  
   aside::-webkit-scrollbar-track {
-    background: #3a3a3a; /* Change to your preferred color */
+    background: #3a3a3a; 
     border-radius: 5px;
   }
   
-  /* Scrollbar thumb (the draggable part) */
+  
   aside::-webkit-scrollbar-thumb {
-    background: #888; /* Change this color */
+    background: #888; 
     border-radius: 50px;
   }
   
-  /* Scrollbar thumb on hover */
+
   aside::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Darker color on hover */
+    background: #555; 
   }
   @media screen and (max-width: 2200px) {
     aside {
